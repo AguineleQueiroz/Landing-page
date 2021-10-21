@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+@import
+url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Open+Sans:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------- Variáveis --------------*/
+:root{
+    scroll-behavior: smooth;
+    --font-tittle:'Montserrat', sans-serif;
+    --main-font: 'Open Sans', sans-serif;
+    --padding-std: 3rem;
+    
+    --primary-color: #50409a;
+    --white-color: white;
+    --border-color-nav: #eeee;
+    --menu-effect: #FEE440;
+    --color-logo: #ff7682;
+    
+}
+
+/*--------------CSS Tags base --------------*/
+body{
+    font: 1.7rem var(--main-font);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-tittle);
+}
+
+h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+h4{
+    font-size: 2.5rem;
+}
+
+h5{
+    font-size: 2rem;
+}
+
+h6{
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*--------------CSS Classes reutilizaveis --------------*/
+.bg-confetti-doodles{
+    background-image: url(../img/confetti-doodles.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.bg-white{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.pages{
+    min-height: 100vh;
+}
+
+/*--------------CSS menu --------------*/
+.menu{
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    border-bottom: 0.1 solid var(--border-color-nav);
+}
+
+.menu-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 5rem;
+}
+
+.menu-content .nav-bar ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu-content .nav-bar ul li a{
+    display: block;
+    font-size: 1rem;
+    padding: 1.2rem;
+    position: relative;
+}
+
+.nav-bar ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0.01rem;
+    left: 50%;
+    width: 0;
+    height: 0.3rem;
+    background-color: var(--menu-effect);
+    transition: all 200ms ease-in-out;
+}
+
+.nav-bar ul li a:hover::after{
+    width: 90%;
+    left: 5%;
+    color: var(--color-logo);
+}
+
+.nav-bar ul li a:hover{
+    color: var(--color-logo);
+    transition: all 200ms ease-in-out;
+}
+
+.logo a {
+    display: block;
+    color: var(--color-logo);
+    font-size: 2rem;
+}
+
+/*--------------CSS Home --------------*/
+.grid-home{
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr;
+    height: 100vh;
+    gap: var(--padding-std);
+}
+
+.homepage {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-top: var(--padding-std);
+    justify-content: center;
+}
+
+.homepage h2{
+    padding: 0rem 0rem 1rem 5rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.homepage p{
+    padding: 1rem 0rem 1rem 5rem;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+}
+
+.img-homepage img{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10rem 4rem 0 0;
+    justify-content:center;
+    max-width: 100%;
+    height: auto;
+}
+
+.first-section{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 7rem 10rem;
+    max-width: 75rem;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.first-section h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.first-section p{
+    padding-top: 2rem;
+    line-height: 2.5rem;
+}
+
+.content-col .tittle-grid{
+    padding: 7rem 0rem 3rem 0rem;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--color-logo);
+}
+
+.content-col p{
+    padding-top: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.content-tips{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 0 5rem;
+}
+
+.grid-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;    
+    gap: var(--padding-std);
+}
+
+.grid-content article h3{
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.grid-content article p{
+    font-size: 1.2rem;
+}
