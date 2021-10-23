@@ -23,7 +23,9 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0
     --border-color-nav: #eeee;
     --menu-effect: #FEE440;
     --color-logo: #ff7682;
+    --color-btn: #6d92e2;
     --gray-bg-ligt: #f0efef;
+    --periodo-letter: #826fd6;
 }
 
 /*--------------CSS Tags base --------------*/
@@ -289,10 +291,15 @@ a{
     display: flex;
     flex-flow: column wrap;
     width: 20rem;
-    height: 25rem;
+    height: 26rem;
     margin: 0.2rem 2rem;
     border: 1px solid var(--gray-bg-ligt);
+    box-shadow: 0rem 0.5rem 0.5rem 0.5rem var(--gray-bg-ligt);
     border-radius: 5px;    
+}
+
+.produtos-conteiner .produtos:hover{
+    border: 1px solid var(--menu-effect);
 }
 
 .produtos .nome{
@@ -315,6 +322,12 @@ a{
     max-width: 5rem;
     max-height: 5rem;
     margin: 0;
+    font-size: 2.5rem;
+}
+
+.box-preco .preco-periodo{
+    color: var(--periodo-letter);
+    font-size: 1.4rem;
 }
 
 .preco-produto div:nth-child(4) span{
@@ -344,12 +357,18 @@ a{
 .btn .botton-box{
     padding: 0.5rem;
     border-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+.btn .botton-box:hover{
+    padding: 0.6rem;
+    border-radius: 5px;
     background-color: var(--color-logo);
+    transform: translate(3%, 3%) scale(1.2rem);
 }
 
 .botton-box a{
     color: var(--white-color);
     font-size: 1.2rem;
     padding: 0.5rem;
-    text-align: center;    
 }
