@@ -9,6 +9,7 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*-------------- Variáveis --------------*/
@@ -23,9 +24,11 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0
     --border-color-nav: #eeee;
     --menu-effect: #FEE440;
     --color-logo: #ff7682;
-    --color-btn: #6d92e2;
+    --color-btn: #553ace;
     --gray-bg-ligt: #d4d4d4;
     --periodo-letter: #826fd6;
+    --color-bg-form: #F8F9FA;
+    --color-black: #1a1919f3;
 }
 
 /*--------------CSS Tags base --------------*/
@@ -66,6 +69,18 @@ a{
     text-decoration: none;
 }
 
+input::placeholder{
+    color: var(--primary-color);
+    padding: 0.5rem;
+}
+
+label{
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-black);
+    padding-bottom: 0.5rem;
+}
+
 /*--------------CSS Classes reutilizaveis --------------*/
 .bg-confetti-doodles{
     background-image: url(../img/confetti-doodles.svg);
@@ -89,6 +104,10 @@ a{
     max-width: 120rem;
 }
 
+.full-width{
+    width: 100%;
+    flex: 1 1 100%;
+}
 
 /*--------------CSS menu --------------*/
 .menu{
@@ -202,22 +221,23 @@ a{
 .first-section h2{
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .first-section p{
     padding-top: 2rem;
     line-height: 2.5rem;
+    font-size: 1.6rem;
 }
+
+/*--------------CSS TIPS --------------*/
 
 .content-col .tittle-grid{
     padding: 7rem 0rem 3rem 0rem;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-logo);
 }
-
-/*--------------CSS TIPS --------------*/
 
 .content-col p{
     padding-top: 0.5rem;
@@ -244,7 +264,6 @@ a{
     padding-left: 4rem;
     position: relative;
 }
-
 
 .grid-content > article > h3::before{
     counter-increment: counter-grid;
@@ -291,16 +310,13 @@ a{
     width: 20rem;
     height: 26rem;
     margin: 0.2rem 2rem;
-    border: 1px solid var(--gray-bg-ligt);
+    border: 0.1rem solid var(--gray-bg-ligt);
     border-radius: 5px;    
 }
 
 .produtos-conteiner .produtos:hover{
     box-shadow: 0rem -0.2rem 2rem 0.3rem var(--gray-bg-ligt);
-}
-
-.produtos-conteiner .produtos:hover{
-    border: 1px solid var(--menu-effect);
+    border: 0.1rem solid var(--menu-effect);
 }
 
 .produtos .nome{
@@ -309,7 +325,7 @@ a{
     color: var(--white-color);
     font-size: 1.5rem;
     background-color: var(--primary-color);
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 0.4rem 0.4rem 0rem 0rem;
 }
 
 .preco-produto{
@@ -350,27 +366,122 @@ a{
     padding: 1rem 0rem 0.5rem 0rem;    
 }
 
-.btn{
+.btn{   
     margin: auto;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.5rem;    
 }
 
 .btn .botton-box{
-    padding: 0.5rem;
-    border-radius: 5px;
+    padding: 0.3rem 2rem 0.6rem 2rem;
+    border-radius: 5rem;
     background-color: var(--primary-color);
     box-shadow: 0rem 0.5rem 1rem -0.08rem var(--gray-bg-ligt);
 }
 
 .btn .botton-box:hover{
-    padding: 0.6rem;
-    border-radius: 5px;
-    background-color: var(--color-logo);
-    transform: translate(3%, 3%) scale(1.2rem);
+    padding: 0.3rem 2.1rem 0.6rem 2.1rem;
+    border-radius: 5rem;
+    background-color: var(--color-btn);
+    transform: translate(2%, 2%) scale(1rem) ease-in-out;
 }
 
-.botton-box a{
+.btn .botton-box a{
     color: var(--white-color);
     font-size: 1.2rem;
-    padding: 0.5rem;
+    align-self: center;
+    
+}
+
+/*--------------CSS SUPPORT --------------*/
+
+.contato{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 6rem 0rem 0rem 2rem;
+}
+
+.form-inputs{
+    padding: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    max-width: 60%;
+    min-height: 40vh;
+    background-color: var(--color-bg-form);
+}
+
+.tittle-suporte{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.form-group{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.usr-nome, .usr-sobrenome{
+    width: 21.2rem;  
+    padding-top: 0rem;  
+}
+
+.usuario-nome .usr-nome{
+   padding-right: 0.8rem;  
+}
+
+.usuario-nome{
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--padding-std);
+}
+
+.contato .form-inputs{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+.form-inputs .form-group input{
+    padding: 0.6rem;
+    border-radius: 5rem;
+    border: 0.1rem solid var(--gray-bg-ligt);
+    box-shadow: inset 0 0.2rem 0.2rem rgb(7 29 43 / 12%);
+    outline: none;
+}
+
+.form-group input:hover{
+    border: 0.1rem solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.area-descricao{
+    border: 0.1rem solid var(--gray-bg-ligt);
+    border-radius: 0.3rem;
+    outline: none;
+    padding:0.5rem;
+    overflow-y: scroll;
+}
+
+.area-descricao::placeholder{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.area-descricao:hover{
+    border: 0.1rem solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-submit{
+    color: var(--white-color);
+    border-radius: 5rem;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    padding: 0.8rem 1rem;
+}
+
+.btn-submit:hover{
+    background-color: var(--color-btn);
+    padding: 0.85rem 1.05rem;
 }
