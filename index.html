@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
 
-
+    <link rel="stylesheet" href="assets/css/rootstyle.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 
 <body class="bg-confetti-doodles">
@@ -157,14 +158,25 @@
 
     <section id="forms" class="bg-confetti-doodles pages suporte">
         <div class="contato">
-            <h3 class="tittle-suporte">Solicitar ajuda</h3>
+            
+            <div class="support">
+                <div class="sppt-div">
+                    <div class="title-section">
+                        <h3>Solicitar ajuda</h3>
+                    </div>
+                    <div class="img-sppt">
+                        <img src="assets/img/support-img.svg" alt="support-me">
+                    </div>
+                </div>
+            </div>
             <fieldset class="form-inputs">
+                <h4 class="tittle-fieldset">Forneça as informações abaixo para solicitar o suporte.</h4>
                 <div class="form-group usuario-nome">
-                        <div>
+                        <div class="usr-div">
                             <label for="nome">Seu nome</label>
                             <input class="usr-nome" placeholder= "João" type="text" name="nome" id="nome" maxlength="40" required>
                         </div> 
-                        <div >      
+                        <div  class="usr-div">      
                             <label for="nome">Seu sobrenome</label>
                             <input class="usr-sobrenome" placeholder="Silva" type="text" name="sobrenome" id="sobrenome" maxlength="40" required>
                         </div>
