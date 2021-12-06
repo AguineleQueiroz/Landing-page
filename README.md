@@ -1,2 +1,2 @@
 # Landing-page
- Flex box and Grid layout study
+ Estudos de Flex Box e Grid Layout. Sem responsividade. Que abordarei separadamente, para posterior aplicação nesse projeto.
