@@ -29,6 +29,8 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0
     --periodo-letter: #826fd6;
     --color-bg-form: #F8F9FA;
     --color-black: #1a1919f3;
+    --footer-color: #241c49e5;
+    --gray-line-footer: #686666c5;
 }
 
 /*--------------CSS Tags base --------------*/
@@ -66,7 +68,7 @@ h6{
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none;  
 }
 
 input::placeholder{
@@ -81,6 +83,9 @@ label{
     padding-bottom: 0.5rem;
 }
 
+ul{
+    list-style-type: none;
+}
 /*--------------CSS Classes reutilizaveis --------------*/
 .bg-confetti-doodles{
     background-image: url(../img/confetti-doodles.svg);
@@ -91,6 +96,11 @@ label{
 
 .bg-white{
     background-color: white;
+    color: var(--primary-color);
+}
+
+.bg-footer{
+    background-color: var(--footer-color);
     color: var(--primary-color);
 }
 

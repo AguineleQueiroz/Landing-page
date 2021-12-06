@@ -42,7 +42,7 @@
 .first-section{
     display: flex;
     flex-flow: column nowrap;
-    padding: 7rem 10rem;
+    padding: 10rem 10rem;
     max-width: 120rem;
     justify-content: center;
     text-align: center;
@@ -156,7 +156,7 @@
     color: var(--white-color);
     font-size: 1.5rem;
     background-color: var(--primary-color);
-    border-radius: 0.4rem 0.4rem 0rem 0rem;
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
 }
 
 .preco-produto{
@@ -300,7 +300,7 @@
 }
 
 .usr-nome, .usr-sobrenome{
-    width: 21.39rem;  
+    width: 21.7rem;  
     padding-top: 0rem;  
 }
 
@@ -369,6 +369,92 @@
 
 .btn-submit:hover{
     background-color: var(--color-btn);
-    padding: 0.85rem 1.05rem;
 }
 
+/*--------------CSS ABOUT --------------*/
+
+.sobre-info{
+    display: flex;
+}
+
+.sobre-info .text-info{
+    display: flex;
+    flex: 75%;
+    flex-flow: column wrap;
+    padding: 0;
+
+}
+
+.text-info > h2{
+    font-size: 2.5rem;
+    font-family: var(--font-tittle);
+    padding: 12rem 2rem 0 5rem;;
+}
+
+.text-info > p{
+    font-size: 1.6rem;
+    font: var(--main-font);
+    padding: 2rem 2rem 8rem  5rem;
+}
+
+.sobre-info .img-sobre{
+    flex-flow: column wrap;
+}
+
+.img-sobre > img{
+    flex: 35%;
+    display: block;
+    max-width: 70%;
+    height: 45rem;
+    margin: auto;
+}
+
+
+
+/*--------------CSS FOOTER --------------*/
+
+.box-footer{
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 85vh;
+    max-width: 90vw;  
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-line-footer);      
+}
+
+.col1, .col2, .col3{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    padding-top: 8rem;  
+}
+
+.col-lista1 ul li a, .col-lista2 ul li a, .col-lista3 ul li a{
+    color: var(--gray-bg-ligt);
+    font-size: 1rem;
+}
+
+.col-lista1 h6, .col-lista2 h6, .col-lista3 h6{
+    color: var(--gray-bg-ligt);
+    font-size: 1.5rem;
+}
+
+.box-rodape{
+    margin: 0 auto;
+    max-width: 90vw;
+}
+
+.box-rodape nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.box-rodape nav ul li a{
+    display: block;
+    font-size: 0.8rem;
+    padding: 2rem 2rem 0 0;
+    position: relative;
+    color: var(--gray-bg-ligt);
+}
